@@ -1,1 +1,184 @@
 @import "tailwindcss";
+/* Add these styles to your existing index.css */
+
+/* Prevent horizontal overflow and ensure full responsiveness */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Mobile responsiveness fixes */
+@media (max-width: 768px) {
+  /* Font size adjustments for mobile */
+  .text-5xl { 
+    font-size: 2.5rem !important; /* 40px */
+    line-height: 1.2 !important;
+  }
+  .text-7xl { 
+    font-size: 3rem !important; /* 48px */
+    line-height: 1.1 !important;
+  }
+  .text-4xl { 
+    font-size: 1.75rem !important; /* 28px */
+  }
+  .text-3xl { 
+    font-size: 1.5rem !important; /* 24px */
+  }
+  
+  /* Hero section mobile fixes */
+  #home h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  #home h2 {
+    font-size: 1.25rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  /* Button sizing for touch */
+  button, .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Padding adjustments */
+  .px-6 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  .px-8 {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+  
+  /* Grid fixes for mobile */
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Project cards mobile optimization */
+  .project-card {
+    margin-bottom: 1rem;
+  }
+  
+  /* Navigation mobile fixes */
+  nav .hidden.md\\:flex {
+    display: none !important;
+  }
+}
+
+/* Small mobile devices (iPhone SE, etc) */
+@media (max-width: 375px) {
+  .text-5xl { 
+    font-size: 2rem !important; /* 32px */
+  }
+  .text-7xl { 
+    font-size: 2.5rem !important; /* 40px */
+  }
+  
+  /* Reduce padding further for very small screens */
+  .px-6 {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+  
+  /* Stack CTA buttons vertically */
+  #home .flex-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #home .flex-wrap button {
+    width: 100%;
+    max-width: 280px;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .text-7xl {
+    font-size: 4rem !important;
+  }
+}
+
+/* Ensure images are always responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix for any potential horizontal scroll */
+.container, .max-w-6xl, .max-w-4xl, .max-w-7xl {
+  max-width: 100% !important;
+}
+
+/* Mobile menu improvements */
+@media (max-width: 768px) {
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 50;
+  }
+  
+  .mobile-menu button {
+    width: 100%;
+    text-align: left;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Touch-friendly social links */
+@media (max-width: 768px) {
+  .social-links a {
+    padding: 0.75rem !important;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Project grid mobile optimization */
+@media (max-width: 768px) {
+  .project-grid {
+    gap: 1rem !important;
+  }
+  
+  .project-card {
+    border-radius: 0.75rem !important;
+  }
+}
+
+/* Skills section mobile fix */
+@media (max-width: 640px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+}
+
+/* Experience timeline mobile */
+@media (max-width: 768px) {
+  .experience-timeline {
+    padding-left: 1rem !important;
+  }
+  
+  .experience-timeline .pl-8 {
+    padding-left: 1.5rem !important;
+  }
+}
