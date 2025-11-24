@@ -12,7 +12,7 @@
   import p122 from './assets/p122.png';
   import p1222 from './assets/p1222.png';
   import p1223 from './assets/p1223.png';
-  import p8 from './assets/p8.png';
+  import p8 from './assets/p8.jpeg';
   import p9 from './assets/p9.png';
   import p10 from './assets/p10.png';
   import p11 from './assets/p11.png';
@@ -498,96 +498,98 @@
         </nav>
 
         {/* Hero Section */}
-        <section id="home" className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
-          {/* Animated background grid */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute inset-0" style={{
-              backgroundImage: 'linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)',
-              backgroundSize: '50px 50px'
-            }} />
-          </div>
+       
+<section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 relative overflow-hidden">
+  {/* Animated background grid */}
+  <div className="absolute inset-0 opacity-20">
+    <div className="absolute inset-0" style={{
+      backgroundImage: 'linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)',
+      backgroundSize: '50px 50px'
+    }} />
+  </div>
 
-          <div className="max-w-4xl mx-auto text-center relative z-10">
-            {/* Availability Badge */}
-            <div className={`mb-8 inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full transition-all duration-1000 ${
-              isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-50'
-            }`}>
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-              <span className="text-sm text-gray-400">Available for freelance work</span>
-            </div>
+  <div className="max-w-4xl mx-auto text-center relative z-10">
+    {/* Availability Badge - FIXED FOR MOBILE */}
+    <div className={`mb-6 sm:mb-8 inline-flex items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 bg-blue-500/10 border border-blue-500/20 rounded-full transition-all duration-1000 ${
+      isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-50'
+    }`}>
+      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+      <span className="text-xs sm:text-sm text-gray-400">Available for freelance work</span>
+    </div>
 
-            {/* Main Heading */}
-            <h1 className={`text-5xl md:text-7xl font-bold mb-6 transition-all duration-1000 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}>
-              Hi, I'm <span className="text-blue-500 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">M Usman</span>
-            </h1>
-            
-            {/* Subheading */}
-            <h2 className={`text-2xl md:text-4xl font-light text-gray-400 mb-8 transition-all duration-1000 delay-300 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}>
-              Full Stack Developer & Figma Designer
-            </h2>
-            
-            {/* Description */}
-            <p className={`text-lg text-gray-500 mb-12 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 delay-500 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}>
-              I craft exceptional digital experiences using the MERN stack and create stunning designs in Figma. 
-              With 3+ years of experience, I turn ideas into reality.
-            </p>
+    {/* Main Heading */}
+    <h1 className={`text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 transition-all duration-1000 ${
+      isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+    }`}>
+      Hi, I'm <span className="text-blue-500 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">M Usman</span>
+    </h1>
+    
+    {/* Subheading */}
+    <h2 className={`text-xl sm:text-2xl md:text-4xl font-light text-gray-400 mb-6 sm:mb-8 transition-all duration-1000 delay-300 ${
+      isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+    }`}>
+      Full Stack Developer & Figma Designer
+    </h2>
+    
+    {/* Description */}
+    <p className={`text-base sm:text-lg text-gray-500 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-4 transition-all duration-1000 delay-500 ${
+      isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+    }`}>
+      I craft exceptional digital experiences using the MERN stack and create stunning designs in Figma. 
+      With 3+ years of experience, I turn ideas into reality.
+    </p>
 
-            {/* CTA Buttons */}
-            <div className={`flex flex-wrap gap-4 justify-center mb-12 transition-all duration-1000 delay-700 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="px-8 py-4 bg-blue-500 hover:bg-blue-600 rounded-lg font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2 group shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40"
-              >
-                Get In Touch
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
-              <button
-                onClick={() => scrollToSection('projects')}
-                className="px-8 py-4 border border-white/20 hover:border-blue-500/50 rounded-lg font-medium transition-all duration-300 hover:scale-105 group hover:bg-white/5"
-              >
-                View Work
-              </button>
-            </div>
+    {/* CTA Buttons */}
+    <div className={`flex flex-col sm:flex-row gap-4 justify-center mb-8 sm:mb-12 px-4 transition-all duration-1000 delay-700 ${
+      isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+    }`}>
+      <button
+        onClick={() => scrollToSection('contact')}
+        className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-blue-500 hover:bg-blue-600 rounded-lg font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 group shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40"
+      >
+        Get In Touch
+        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+      </button>
+      <button
+        onClick={() => scrollToSection('projects')}
+        className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border border-white/20 hover:border-blue-500/50 rounded-lg font-medium transition-all duration-300 hover:scale-105 group hover:bg-white/5"
+      >
+        View Work
+      </button>
+    </div>
 
-            {/* Social Links */}
-            <div className={`flex gap-6 justify-center transition-all duration-1000 delay-1000 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}>
-              {[
-                { icon: Github, href: 'https://github.com/MuhammadUsman673' },
-                { icon: Linkedin, href: 'https://www.linkedin.com/in/muhammad-usman-b947b5371' },
-                { icon: Mail, href: 'mailto:Zainusman718@gmail.com' }
-              ].map((social, index) => (
-                <a 
-                  key={index}
-                  href={social.href} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-gray-400 hover:text-blue-500 transition-all duration-300 hover:scale-110 p-3 hover:bg-white/5 rounded-lg"
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
-          </div>
+    {/* Social Links */}
+    <div className={`flex gap-4 sm:gap-6 justify-center transition-all duration-1000 delay-1000 ${
+      isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+    }`}>
+      {[
+        { icon: Github, href: 'https://github.com/MuhammadUsman673' },
+        { icon: Linkedin, href: 'https://www.linkedin.com/in/muhammad-usman-b947b5371' },
+        { icon: Mail, href: 'mailto:Zainusman718@gmail.com' }
+      ].map((social, index) => (
+        <a 
+          key={index}
+          href={social.href} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="text-gray-400 hover:text-blue-500 transition-all duration-300 hover:scale-110 p-3 hover:bg-white/5 rounded-lg"
+        >
+          <social.icon className="w-5 h-5" />
+        </a>
+      ))}
+    </div>
+  </div>
 
-          {/* Scroll indicator */}
-          <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-all duration-1000 delay-1200 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
-          }`}>
-            <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center p-2 animate-bounce">
-              <div className="w-1 h-2 bg-blue-500 rounded-full" />
-            </div>
-          </div>
-        </section>
+  {/* Scroll indicator */}
+  <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-all duration-1000 delay-1200 ${
+    isLoaded ? 'opacity-100' : 'opacity-0'
+  }`}>
+    <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center p-2 animate-bounce">
+      <div className="w-1 h-2 bg-blue-500 rounded-full" />
+    </div>
+  </div>
+</section>
+
 
         {/* About Section */}
         <section id="about" className="py-20 px-6 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
@@ -667,85 +669,90 @@
           </div>
         </section>
 
-      {/* Projects Section */}
-  <section id="projects" className="py-20 px-6 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
-    <div className="max-w-6xl mx-auto">
-      <div className="text-center mb-12 animate-on-scroll">
-        <h2 className="text-sm text-blue-500 font-semibold mb-4 uppercase tracking-wider">Portfolio</h2>
-        <h3 className="text-4xl font-bold mb-4">Featured Projects</h3>
-        <p className="text-gray-400 max-w-2xl mx-auto">
-          Here are some of my recent works. Each project represents a unique challenge and solution.
-        </p>
-      </div>
+        {/* Projects Section */}
+   <section id="projects" className="py-20 px-4 sm:px-6 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
+  <div className="max-w-6xl mx-auto">
+    <div className="text-center mb-12 animate-on-scroll">
+      <h2 className="text-sm text-blue-500 font-semibold mb-4 uppercase tracking-wider">Portfolio</h2>
+      <h3 className="text-3xl sm:text-4xl font-bold mb-4">Featured Projects</h3>
+      <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base px-4">
+        Here are some of my recent works. Each project represents a unique challenge and solution.
+      </p>
+    </div>
 
-      {/* Filter Tabs */}
-      <div className="flex justify-center mb-8 animate-on-scroll">
-        <div className="bg-white/5 border border-white/10 rounded-lg p-1 flex flex-wrap justify-center gap-2">
-          {[
-            { key: 'all', label: 'All', count: projects.length },
-            { key: 'web', label: 'Web Development', count: projects.filter(p => p.type === 'web').length },
-            { key: 'figma', label: 'Figma Designs', count: projects.filter(p => p.type === 'figma').length }
-          ].map((filter) => (
-            <button
-              key={filter.key}
-              onClick={() => setActiveFilter(filter.key)}
-              className={`px-6 py-2 rounded-md text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
-                activeFilter === filter.key
-                  ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/25'
-                  : 'text-gray-400 hover:text-white hover:bg-white/5'
-              }`}
-            >
-              {filter.label}
-              <span className={`px-2 py-1 text-xs rounded-full ${
-                activeFilter === filter.key
-                  ? 'bg-white/20 text-white'
-                  : 'bg-white/10 text-gray-400'
-              }`}>
-                {filter.count}
-              </span>
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Projects Grid - Fixed with consistent thumbnails */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-        {displayedProjects.map((project, index) => (
-          <div
-            key={index}
-            className="group bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-500 hover:scale-105 animate-on-scroll hover:shadow-2xl hover:shadow-blue-500/10"
-            style={{ transitionDelay: `${index * 100}ms` }}
+    {/* Filter Tabs - FIXED FOR MOBILE */}
+    <div className="flex justify-center mb-8 animate-on-scroll px-4">
+      <div className="bg-white/5 border border-white/10 rounded-lg p-1 flex flex-col sm:flex-row flex-wrap justify-center gap-2 w-full sm:w-auto">
+        {[
+          { key: 'all', label: 'All', count: projects.length },
+          { key: 'web', label: 'Web Development', count: projects.filter(p => p.type === 'web').length },
+          { key: 'figma', label: 'Figma Designs', count: projects.filter(p => p.type === 'figma').length }
+        ].map((filter) => (
+          <button
+            key={filter.key}
+            onClick={() => setActiveFilter(filter.key)}
+            className={`px-4 sm:px-6 py-2 rounded-md text-xs sm:text-sm font-medium transition-all duration-300 flex items-center justify-center gap-2 w-full sm:w-auto ${
+              activeFilter === filter.key
+                ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/25'
+                : 'text-gray-400 hover:text-white hover:bg-white/5'
+            }`}
           >
-            {/* Project Type Badge */}
-            <div className="absolute top-3 right-3 z-10">
-              <span className={`px-2 py-1 text-xs rounded-full ${
-                project.type === 'web' 
-                  ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30'
-                  : 'bg-purple-500/20 text-purple-300 border border-purple-500/30'
-              }`}>
-                {project.type === 'web' ? '🌐 Web' : '🎨 Figma'}
-              </span>
-            </div>
+            {filter.label}
+            <span className={`px-2 py-1 text-xs rounded-full ${
+              activeFilter === filter.key
+                ? 'bg-white/20 text-white'
+                : 'bg-white/10 text-gray-400'
+            }`}>
+              {filter.count}
+            </span>
+          </button>
+        ))}
+      </div>
+    </div>
 
-            {/* Project Image - FIXED: Consistent sizing for all thumbnails */}
-            <div className="relative h-48 w-full overflow-hidden bg-gray-800/50">
-              <img 
-                src={project.image} 
-                alt={project.title}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                onError={(e) => {
-                  // Fallback for broken images
-                  e.target.src = 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
-                }}
-              />
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center gap-3">
+    {/* Projects Grid - FIXED: Better mobile responsiveness & hover states */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+      {displayedProjects.map((project, index) => (
+        <div
+          key={index}
+          className="group bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-500 hover:scale-105 animate-on-scroll hover:shadow-2xl hover:shadow-blue-500/10 relative"
+          style={{ transitionDelay: `${index * 100}ms` }}
+        >
+          {/* Project Type Badge */}
+          <div className="absolute top-3 right-3 z-10">
+            <span className={`px-2 py-1 text-xs rounded-full ${
+              project.type === 'web' 
+                ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30'
+                : 'bg-purple-500/20 text-purple-300 border border-purple-500/30'
+            }`}>
+              {project.type === 'web' ? '🌐 Web' : '🎨 Figma'}
+            </span>
+          </div>
+
+          {/* Project Image - FIXED: Better height management for all devices */}
+          <div className="relative h-56 sm:h-64 md:h-56 w-full overflow-hidden bg-gray-800/50">
+            <img 
+              src={project.image} 
+              alt={project.title}
+              className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              onError={(e) => {
+                e.target.src = 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80';
+              }}
+            />
+            
+            {/* Hover Overlay - FIXED: Always visible on mobile, hover on desktop */}
+            <div className="absolute inset-0 
+                          bg-gradient-to-t from-black/90 via-black/50 to-transparent 
+                          md:bg-black/80 md:opacity-0 md:group-hover:opacity-100 
+                          transition-all duration-300 flex items-end md:items-center justify-center p-4">
+              <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
                 {project.link !== '#' ? (
                   <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2 transform -translate-y-2 group-hover:translate-y-0"
+                    className="px-4 py-2.5 bg-blue-500 hover:bg-blue-600 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 w-full sm:w-auto
+                             md:transform md:-translate-y-2 md:group-hover:translate-y-0"
                   >
                     {project.type === 'web' ? 'Live Demo' : 'View Design'}
                     <ExternalLink className="w-4 h-4" />
@@ -753,7 +760,8 @@
                 ) : (
                   <button
                     onClick={() => openGallery(project)}
-                    className="px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2 transform -translate-y-2 group-hover:translate-y-0"
+                    className="px-4 py-2.5 bg-blue-500 hover:bg-blue-600 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 w-full sm:w-auto
+                             md:transform md:-translate-y-2 md:group-hover:translate-y-0"
                   >
                     View Project
                     <ExternalLink className="w-4 h-4" />
@@ -765,7 +773,8 @@
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 border border-white/20 hover:border-blue-500/50 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2 transform -translate-y-2 group-hover:translate-y-0"
+                    className="px-4 py-2.5 border border-white/20 hover:border-blue-500/50 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 w-full sm:w-auto bg-black/50
+                             md:transform md:-translate-y-2 md:group-hover:translate-y-0"
                     style={{ transitionDelay: '100ms' }}
                   >
                     Code
@@ -774,166 +783,168 @@
                 )}
               </div>
             </div>
-            
-            {/* Project Content */}
-            <div className="p-6">
-              <h4 className="text-lg font-bold mb-3 group-hover:text-blue-500 transition-colors duration-300 flex items-center gap-2">
-                <span className="text-xl">{project.emoji}</span>
-                {project.title}
-              </h4>
-              <p className="text-gray-400 text-sm mb-4 leading-relaxed line-clamp-3">
-                {project.description}
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.tech.slice(0, 4).map((tech, i) => (
-                  <span 
-                    key={i} 
-                    className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${
-                      project.type === 'web'
-                        ? 'bg-blue-500/10 text-blue-400 group-hover:bg-blue-500/20'
-                        : 'bg-purple-500/10 text-purple-400 group-hover:bg-purple-500/20'
-                    }`}
-                  >
-                    {tech}
-                  </span>
-                ))}
-                {project.tech.length > 4 && (
-                  <span className="px-3 py-1 text-xs rounded-full bg-gray-500/10 text-gray-400">
-                    +{project.tech.length - 4}
-                  </span>
-                )}
-              </div>
-              {/* Bottom link */}
-              <div className="flex justify-between items-center">
-                {project.link !== '#' ? (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all duration-300 group/link ${
-                      project.type === 'web' ? 'text-blue-500' : 'text-purple-500'
-                    }`}
-                  >
-                    {project.type === 'web' ? 'Visit Live Site' : 'View Design'}
-                    <ArrowRight className="w-4 h-4 opacity-0 group-hover/link:opacity-100 transition-all duration-300 transform group-hover/link:translate-x-1" />
-                  </a>
-                ) : (
-                  <button
-                    onClick={() => openGallery(project)}
-                    className={`text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all duration-300 group/link ${
-                      project.type === 'web' ? 'text-blue-500' : 'text-purple-500'
-                    }`}
-                  >
-                    View Details
-                    <ArrowRight className="w-4 h-4 opacity-0 group-hover/link:opacity-100 transition-all duration-300 transform group-hover/link:translate-x-1" />
-                  </button>
-                )}
-                
-                {/* Features count */}
-                <span className="text-xs text-gray-500 bg-white/5 px-2 py-1 rounded">
-                  {project.features.length} features
+          </div>
+          
+          {/* Project Content */}
+          <div className="p-4 sm:p-6">
+            <h4 className="text-base sm:text-lg font-bold mb-2 sm:mb-3 group-hover:text-blue-500 transition-colors duration-300 flex items-center gap-2">
+              <span className="text-xl">{project.emoji}</span>
+              {project.title}
+            </h4>
+            <p className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed line-clamp-3">
+              {project.description}
+            </p>
+            <div className="flex flex-wrap gap-2 mb-3 sm:mb-4">
+              {project.tech.slice(0, 4).map((tech, i) => (
+                <span 
+                  key={i} 
+                  className={`px-2 sm:px-3 py-1 text-xs rounded-full transition-all duration-300 ${
+                    project.type === 'web'
+                      ? 'bg-blue-500/10 text-blue-400 group-hover:bg-blue-500/20'
+                      : 'bg-purple-500/10 text-purple-400 group-hover:bg-purple-500/20'
+                  }`}
+                >
+                  {tech}
                 </span>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Pagination Controls */}
-      {totalPages > 1 && (
-        <div className="flex justify-center items-center gap-6 animate-on-scroll">
-          <button
-            onClick={() => setCurrentPage(prev => Math.max(0, prev - 1))}
-            disabled={currentPage === 0}
-            className="flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-lg hover:border-blue-500/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105"
-          >
-            <ArrowRight className="w-4 h-4 rotate-180" />
-            Previous
-          </button>
-          
-          <span className="text-sm text-gray-400">
-            Page {currentPage + 1} of {totalPages}
-          </span>
-          
-          <button
-            onClick={() => setCurrentPage(prev => prev + 1)}
-            disabled={currentPage >= totalPages - 1}
-            className="flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-lg hover:border-blue-500/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105"
-          >
-            Next
-            <ArrowRight className="w-4 h-4" />
-          </button>
-        </div>
-      )}
-
-      {/* Gallery Modal */}
-      {galleryOpen && currentProject && (
-        <div className="fixed inset-0 bg-black/95 backdrop-blur-md z-50 flex items-center justify-center p-4 animate-fade-in">
-          <div className="bg-white/10 backdrop-blur-md rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto animate-scale-in">
-            <div className="p-6 border-b border-white/10 flex justify-between items-center">
-              <h3 className="text-xl font-bold text-white">{currentProject.title}</h3>
-              <button
-                onClick={closeGallery}
-                className="text-white hover:text-blue-500 transition-all duration-300 hover:scale-110"
-              >
-                <X className="w-6 h-6" />
-              </button>
-            </div>
-            <div className="p-6 space-y-6">
-              {currentProject.images.map((img, idx) => (
-                <div key={idx} className="text-center animate-fade-in" style={{ animationDelay: `${idx * 200}ms` }}>
-                  <img 
-                    src={img} 
-                    alt={`${currentProject.title} - Screenshot ${idx + 1}`}
-                    className="w-full h-auto rounded-lg shadow-2xl mx-auto hover:scale-105 transition-transform duration-500"
-                  />
-                  <p className="text-gray-400 text-sm mt-2">Screenshot {idx + 1} of {currentProject.images.length}</p>
-                </div>
               ))}
+              {project.tech.length > 4 && (
+                <span className="px-2 sm:px-3 py-1 text-xs rounded-full bg-gray-500/10 text-gray-400">
+                  +{project.tech.length - 4}
+                </span>
+              )}
+            </div>
+            
+            {/* Bottom link */}
+            <div className="flex justify-between items-center">
+              {project.link !== '#' ? (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`text-xs sm:text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all duration-300 group/link ${
+                    project.type === 'web' ? 'text-blue-500' : 'text-purple-500'
+                  }`}
+                >
+                  {project.type === 'web' ? 'Visit Live Site' : 'View Design'}
+                  <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 opacity-0 group-hover/link:opacity-100 transition-all duration-300 transform group-hover/link:translate-x-1" />
+                </a>
+              ) : (
+                <button
+                  onClick={() => openGallery(project)}
+                  className={`text-xs sm:text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all duration-300 group/link ${
+                    project.type === 'web' ? 'text-blue-500' : 'text-purple-500'
+                  }`}
+                >
+                  View Details
+                  <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 opacity-0 group-hover/link:opacity-100 transition-all duration-300 transform group-hover/link:translate-x-1" />
+                </button>
+              )}
+              
+              {/* Features count */}
+              <span className="text-xs text-gray-500 bg-white/5 px-2 py-1 rounded">
+                {project.features.length} features
+              </span>
             </div>
           </div>
         </div>
-      )}
+      ))}
+    </div>
 
-      {/* Call to Action */}
-      <div className="text-center mt-12 animate-on-scroll">
-        <p className="text-gray-400 mb-4 text-sm">Interested in working together?</p>
+    {/* Pagination Controls */}
+    {totalPages > 1 && (
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 animate-on-scroll">
         <button
-          onClick={() => scrollToSection('contact')}
-          className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2 mx-auto text-sm group shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40"
+          onClick={() => setCurrentPage(prev => Math.max(0, prev - 1))}
+          disabled={currentPage === 0}
+          className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-lg hover:border-blue-500/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 text-sm"
         >
-          <Mail className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-          Start a Project
+          <ArrowRight className="w-4 h-4 rotate-180" />
+          Previous
+        </button>
+        
+        <span className="text-sm text-gray-400">
+          Page {currentPage + 1} of {totalPages}
+        </span>
+        
+        <button
+          onClick={() => setCurrentPage(prev => prev + 1)}
+          disabled={currentPage >= totalPages - 1}
+          className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-lg hover:border-blue-500/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 text-sm"
+        >
+          Next
+          <ArrowRight className="w-4 h-4" />
         </button>
       </div>
-    </div>
-  </section>
+    )}
 
-        {/* Experience Section */}
-        <section id="experience" className="py-20 px-6 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16 animate-on-scroll">
-              <h2 className="text-sm text-blue-500 font-semibold mb-4 uppercase tracking-wider">Career</h2>
-              <h3 className="text-4xl font-bold">Work Experience</h3>
-            </div>
-
-            <div className="space-y-8">
-              {experience.map((exp, index) => (
-                <div
-                  key={index}
-                  className="relative pl-8 pb-8 border-l-2 border-white/10 last:pb-0 animate-on-scroll group"
-                  style={{ transitionDelay: `${index * 200}ms` }}
-                >
-                  <div className="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] bg-blue-500 rounded-full group-hover:scale-150 transition-transform duration-300" />
-                  <div className="text-sm text-blue-500 font-semibold mb-2 group-hover:translate-x-2 transition-transform duration-300">{exp.year}</div>
-                  <h4 className="text-xl font-bold mb-1 group-hover:text-blue-500 transition-colors duration-300">{exp.title}</h4>
-                  <div className="text-gray-400 mb-3 group-hover:translate-x-2 transition-transform duration-300">{exp.company}</div>
-                  <p className="text-gray-500 leading-relaxed group-hover:text-gray-400 transition-colors duration-300">{exp.description}</p>
-                </div>
-              ))}
-            </div>
+    {/* Gallery Modal */}
+    {galleryOpen && currentProject && (
+      <div className="fixed inset-0 bg-black/95 backdrop-blur-md z-50 flex items-center justify-center p-4 animate-fade-in">
+        <div className="bg-white/10 backdrop-blur-md rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto animate-scale-in">
+          <div className="p-4 sm:p-6 border-b border-white/10 flex justify-between items-center">
+            <h3 className="text-lg sm:text-xl font-bold text-white">{currentProject.title}</h3>
+            <button
+              onClick={closeGallery}
+              className="text-white hover:text-blue-500 transition-all duration-300 hover:scale-110"
+            >
+              <X className="w-6 h-6" />
+            </button>
           </div>
-        </section>
+          <div className="p-4 sm:p-6 space-y-6">
+            {currentProject.images.map((img, idx) => (
+              <div key={idx} className="text-center animate-fade-in" style={{ animationDelay: `${idx * 200}ms` }}>
+                <img 
+                  src={img} 
+                  alt={`${currentProject.title} - Screenshot ${idx + 1}`}
+                  className="w-full h-auto rounded-lg shadow-2xl mx-auto hover:scale-105 transition-transform duration-500"
+                />
+                <p className="text-gray-400 text-xs sm:text-sm mt-2">Screenshot {idx + 1} of {currentProject.images.length}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    )}
+
+    {/* Call to Action */}
+    <div className="text-center mt-12 animate-on-scroll">
+      <p className="text-gray-400 mb-4 text-sm">Interested in working together?</p>
+      <button
+        onClick={() => scrollToSection('contact')}
+        className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2 mx-auto text-sm group shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40"
+      >
+        <Mail className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+        Start a Project
+      </button>
+    </div>
+  </div>
+</section>
+
+          {/* Experience Section */}
+          <section id="experience" className="py-20 px-6 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-16 animate-on-scroll">
+                <h2 className="text-sm text-blue-500 font-semibold mb-4 uppercase tracking-wider">Career</h2>
+                <h3 className="text-4xl font-bold">Work Experience</h3>
+              </div>
+
+              <div className="space-y-8">
+                {experience.map((exp, index) => (
+                  <div
+                    key={index}
+                    className="relative pl-8 pb-8 border-l-2 border-white/10 last:pb-0 animate-on-scroll group"
+                    style={{ transitionDelay: `${index * 200}ms` }}
+                  >
+                    <div className="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] bg-blue-500 rounded-full group-hover:scale-150 transition-transform duration-300" />
+                    <div className="text-sm text-blue-500 font-semibold mb-2 group-hover:translate-x-2 transition-transform duration-300">{exp.year}</div>
+                    <h4 className="text-xl font-bold mb-1 group-hover:text-blue-500 transition-colors duration-300">{exp.title}</h4>
+                    <div className="text-gray-400 mb-3 group-hover:translate-x-2 transition-transform duration-300">{exp.company}</div>
+                    <p className="text-gray-500 leading-relaxed group-hover:text-gray-400 transition-colors duration-300">{exp.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
 
         {/* Contact Section */}
         <section id="contact" className="py-20 px-6 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
