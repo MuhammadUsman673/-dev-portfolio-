@@ -493,31 +493,50 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section id="experience" className="py-20 px-6 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="text-sm text-blue-500 font-semibold mb-4 uppercase tracking-wider">Career</h2>
-            <h3 className="text-4xl font-bold">Work Experience</h3>
-          </div>
+   {/* Experience Section */}
+<section id="experience" className="py-20 px-6 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
+  <div className="max-w-4xl mx-auto">
+    <div className="text-center mb-16 animate-on-scroll">
+      <h2 className="text-sm text-blue-500 font-semibold mb-4 uppercase tracking-wider">Career</h2>
+      <h3 className="text-4xl font-bold">Work Experience</h3>
+    </div>
 
-          <div className="space-y-8">
-            {experience.map((exp, index) => (
-              <div
-                key={index}
-                className="relative pl-8 pb-8 border-l-2 border-white/10 last:pb-0 animate-on-scroll group"
-                style={{ transitionDelay: `${index * 200}ms` }}
-              >
-                <div className="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] bg-blue-500 rounded-full group-hover:scale-150 transition-transform duration-300" />
-                <div className="text-sm text-blue-500 font-semibold mb-2 group-hover:translate-x-2 transition-transform duration-300">{exp.year}</div>
-                <h4 className="text-xl font-bold mb-1 group-hover:text-blue-500 transition-colors duration-300">{exp.title}</h4>
-                <div className="text-gray-400 mb-3 group-hover:translate-x-2 transition-transform duration-300">{exp.company}</div>
-                <p className="text-gray-500 leading-relaxed group-hover:text-gray-400 transition-colors duration-300">{exp.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+    <div className="space-y-8">
+      <div
+        className="relative pl-8 pb-8 border-l-2 border-white/10 animate-on-scroll group"
+        style={{ transitionDelay: '0ms' }}
+      >
+        <div className="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] bg-blue-500 rounded-full group-hover:scale-150 transition-transform duration-300" />
+        <div className="text-sm text-blue-500 font-semibold mb-2 group-hover:translate-x-2 transition-transform duration-300">Feb 2023 – June 2024</div>
+        <h4 className="text-xl font-bold mb-1 group-hover:text-blue-500 transition-colors duration-300">Frontend Developer</h4>
+        <div className="text-gray-400 mb-3 group-hover:translate-x-2 transition-transform duration-300">SlashCart</div>
+        <p className="text-gray-500 leading-relaxed group-hover:text-gray-400 transition-colors duration-300">Developed responsive user interfaces with React.js and Tailwind CSS. Converted Figma designs into pixel-perfect, interactive components. Built and managed state for dynamic user experiences. Optimized performance and participated in agile delivery cycles.</p>
+      </div>
+
+      <div
+        className="relative pl-8 pb-8 border-l-2 border-white/10 animate-on-scroll group"
+        style={{ transitionDelay: '200ms' }}
+      >
+        <div className="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] bg-blue-500 rounded-full group-hover:scale-150 transition-transform duration-300" />
+        <div className="text-sm text-blue-500 font-semibold mb-2 group-hover:translate-x-2 transition-transform duration-300">Aug 2024 – June 2025</div>
+        <h4 className="text-xl font-bold mb-1 group-hover:text-blue-500 transition-colors duration-300">MERN Stack Web Developer</h4>
+        <div className="text-gray-400 mb-3 group-hover:translate-x-2 transition-transform duration-300">HiSkyTech</div>
+        <p className="text-gray-500 leading-relaxed group-hover:text-gray-400 transition-colors duration-300">Developed full-stack web applications using MERN (MongoDB, Express.js, React.js, Node.js). Built responsive frontend components with React.js and Tailwind CSS. Translated Figma designs into functional, high-performance features with cross-functional teams. Integrated RESTful APIs and managed scalable backend services.</p>
+      </div>
+
+      <div
+        className="relative pl-8 pb-8 border-l-2 border-white/10 animate-on-scroll group"
+        style={{ transitionDelay: '400ms' }}
+      >
+        <div className="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] bg-blue-500 rounded-full group-hover:scale-150 transition-transform duration-300" />
+        <div className="text-sm text-blue-500 font-semibold mb-2 group-hover:translate-x-2 transition-transform duration-300"></div>
+        <h4 className="text-xl font-bold mb-1 group-hover:text-blue-500 transition-colors duration-300">Business Developer – Upwork</h4>
+        <div className="text-gray-400 mb-3 group-hover:translate-x-2 transition-transform duration-300">Devix (Remote)</div>
+        <p className="text-gray-500 leading-relaxed group-hover:text-gray-400 transition-colors duration-300">Expanded client base and managed key freelance projects on Upwork. Translated requirements into clear technical proposals and project plans. Maintained 100% Job Success Score as a Top-Rated freelancer. Built long-term client relationships to support business growth.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
